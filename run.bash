@@ -2,7 +2,7 @@
 
 num_processor=$(grep -c ^processor /proc/cpuinfo)
 #num_processor=7
-width=1536
+width=1024
 gcc main.c -fopenmp || exit
 
 echo "" >>output.txt
