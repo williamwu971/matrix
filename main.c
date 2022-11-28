@@ -92,7 +92,7 @@ int main(int argc, char **argv) {
     gettimeofday(&et, NULL);
     elapsed = ((et.tv_sec - st.tv_sec) * 1000000) + (et.tv_usec - st.tv_usec) + 1;
     printf("(%s,%d) [%6lus] \n", __FUNCTION__, __LINE__, elapsed / 1000000);
-    fprintf(stderr, "%.3f ", (double) elapsed / 1000000.0f);
+    fprintf(stderr, "%12.3f ", (double) elapsed / 1000000.0f);
 
     assert(result_mat != NULL);
     assert(res_width != 0);
