@@ -2,11 +2,11 @@
 
 num_processor=$(grep -c ^processor /proc/cpuinfo)
 #num_processor=7
-width=2048
+width=1024
 rep=1
 gcc main.c -fopenmp || exit
 
-echo "" >>output.txt
+echo "" >output.txt
 echo "$width x $width" >>output.txt
 
 for i in $(seq 1 "$num_processor"); do
